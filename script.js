@@ -1,21 +1,40 @@
 
 var btnAbrir = document.getElementById("btn-abrir");
 var btnCerrar = document.getElementById("btn-cerrar");
+
+var btnCerrar2 = document.getElementById("btn-cerrar2");
+
+var btnCerrar3 = document.getElementById("btn-cerrar3");
+
 var modal = document.getElementById("modal");
 
-btnAbrir.addEventListener("click",()=>{
-	modal.showModal();
-})
+var modal2 = document.getElementById("modal2");
+
+var modal3 = document.getElementById("modal3");
+
 
 btnCerrar.addEventListener("click",()=>{
 	modal.close();
+
 })
 
-let correctasElec = [1,3,3,2,2,1];
+btnCerrar2.addEventListener("click",()=>{
+	modal2.close();
 
-let correctasMec = [2,1,2,1,1,];
+})
 
-let correctasCons = [3,2,1,3,3,];
+btnCerrar3.addEventListener("click",()=>{
+	modal3.close();
+	
+})
+
+
+
+let correctasElec = [1,3,3,2,2,1,2,1,3,2];
+
+let correctasMec = [2,1,2,1,1,0,0,3,1,3];
+
+let correctasCons = [3,2,1,3,3,0,1,2,2,1];
 
 let opcion_elegida = [];
 
@@ -28,7 +47,7 @@ let contador = 0;
 var boolean = 0;
 
 function respuesta(num_pregunta, seleccionada){
-	//contador ++;
+	contador ++;
 	opcion_elegida[num_pregunta] = seleccionada.value;
 
 	id= "p" + num_pregunta;
@@ -38,10 +57,16 @@ function respuesta(num_pregunta, seleccionada){
 	labels[5].style.backgroundColor = "white";
 	labels[7].style.backgroundColor = "white";
 	labels[9].style.backgroundColor = "white";
+	labels[11].style.backgroundColor = "white";
 
 	seleccionada.parentNode.style.backgroundColor = "#cec0fc";
  
 }
+
+
+
+
+
 
 function corregir(){
 	cantidad_correctasElec = 0;
@@ -51,7 +76,7 @@ function corregir(){
 	for (i=0; i <correctasElec.length; i++) {
 		if (correctasElec[i]==opcion_elegida[i]) {
 			cantidad_correctasElec++;
-			contador ++;
+			//contador ++;
 		
 		}
 	}
@@ -59,7 +84,7 @@ function corregir(){
 	for (i=0; i <correctasMec.length; i++) {
 		if (correctasMec[i]==opcion_elegida[i]) {
 			cantidad_correctasMec++;
-			contador ++;
+			//contador ++;
 		
 		}
 	}
@@ -67,15 +92,15 @@ function corregir(){
 	for (i=0; i <correctasCons.length; i++) {
 		if (correctasCons[i]==opcion_elegida[i]) {
 			cantidad_correctasCons++;
-			contador ++;
+			//contador ++;
 			
 		}
 	}
 
 	//////////////////////////
-	electronica = [(100*cantidad_correctasElec)/6];
-	mecanica = [(100*cantidad_correctasMec)/6];	
-	construcciones = [(100*cantidad_correctasCons)/6];	  
+	electronica = [(100*cantidad_correctasElec)/10];
+	mecanica = [(100*cantidad_correctasMec)/10];	
+	construcciones = [(100*cantidad_correctasCons)/10];	  
 	
 electronica2 = Math.trunc(electronica);
 mecanica2 = Math.trunc(mecanica);
@@ -83,19 +108,12 @@ construcciones2 = Math.trunc(construcciones);
 
 
 	////////////////////////
-	if(contador<6){
+	if(contador<10){
 		
 	boolean = 1;
 	document.getElementById("resultadoFin").innerHTML = "Primero realiza todas las preguntas porfavor!";
 	
 		}
-
-
-
-
-
-
-
 
 		  
 if(boolean == 0){
@@ -107,24 +125,36 @@ if(boolean == 0){
 
 
 	if(electronica > mecanica && electronica > construcciones ){
+		
+			modal.showModal();
+
+		
 
 		document.getElementById("resultadoFin").innerHTML = "Electronica";
+
 		
 		
 		}
 	
 		if(mecanica > electronica && mecanica > construcciones ){
 
-			document.getElementById("resultadoFin").innerHTML = "Electro-Mecanica";
-			
+		modal2.showModal();
+		document.getElementById("resultadoFin").innerHTML = "Electro-Mecanica";
+		
+		
+
+		
 			}
 
-			if(construcciones > electronica && construcciones > mecanica ){
+	    if(construcciones > electronica && construcciones > mecanica ){
+	
+			modal3.showModal();
+			document.getElementById("resultadoFin").innerHTML = "Construcciones";
 
-				document.getElementById("resultadoFin").innerHTML = "Construcciones";
 				
 				}
 			}
+			
 				
 		
 }

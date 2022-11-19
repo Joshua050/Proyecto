@@ -1,6 +1,9 @@
-var btnAbrirModal = document.getElementById("btn-abrir-modal");
-var btnCerrarModal = document.getElementById("btn-cerrar-modal");
-var modal = document.getElementById("modal");
+const btnAbrirModal = 
+document.querySelector("#btn-abrir-modal");
+const btnCerrarModal = 
+document.querySelector("#btn-cerrar-modal");
+const modal = 
+document.querySelector("#modal");
 
 btnAbrirModal.addEventListener("click",()=>{
 	modal.showModal();

@@ -31,18 +31,18 @@ label{
 label:hover{
 	background: #cec0fc;
 }
-#btn-abrir{
-	width:20%;
-	display: block;
-	margin-left: 80%;
+button{
+	width:80%,
+	display block;
+	margin: auto;
 	padding: 10px;
 
 	background-color: #76d7c8;
 	border: none;
 	cursor: pointer;
-	border-radius: 10px;
+	border-radius: 20px;
 }
-#btn-abrir:hover{
+button:hover{
 	background: #000;
 	color: #fff;
 }
@@ -70,14 +70,37 @@ h2{
 
 }
 
-#modal::backdrop {
+#modal::backdrop{
 background-color: rgba(0, 0, 0, 0.55);
 
 }
-
+/*
 #modal{
-	width: 50%  ;
-	height: 40%;
+	max-width: 50ch ;
 	background-image:url(electronica.jpg);
 	color: white;
-}
+}*/
+
+#modal2::backdrop{
+	background-color: rgba(0, 0, 0, 0.55);
+	
+	}
+	/*
+	#modal2{
+		max-width: 50ch ;
+		height: 60%;
+		background-image:url(tdma.png);
+		color: white;
+	}*/
+
+	#moda3::backdrop{
+		background-color: rgba(0, 0, 0, 0.55);
+		
+		}
+		/*
+		#modal3{
+			max-width: 50ch ;
+			height: 60%;
+			background-image:url(has.jpg);
+			color: white;
+		}*/

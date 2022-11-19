@@ -4,14 +4,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Game</title>
-	<link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="estilo2.css">
 	<link rel="shortcut icon" href="ESCUDO 1080x1080.png">
 </head>
 <body>
       <header>
       	<h1>Test Vocacional</h1>
-      	<p>Juego de ecuaciones</p>
+      	<p>¿Qué deberia escoger?</p>
       </header>
       <div class="container">
       	<section id="p0">
@@ -57,6 +56,7 @@
       	<section id="p3">
       		<h3>4- ¿Qué opcion te puede interesar más a futuro?</h3>
       		<label>
+		       
       			<input type="radio" value="1" name="p3" onclick="respuesta(3,this)"> Mantenimiento correctivo y preventivo de instalaciones y equipos
       		</label>
       		<label>
@@ -68,7 +68,7 @@
       	</section>
 
 		  <section id="p4">
-			<h3>5- ¿De Qué manera resuelves tus problemas?</h3>
+			<h3>5- ¿De qué manera resuelves tus problemas?</h3>
 			<label>
 				<input type="radio" value="1" name="p4" onclick="respuesta(4,this)"> Intuitiva
 			</label>
@@ -81,22 +81,67 @@
 		</section>
 
 		<section id="p5">
-			<h3>6- de chico/a¿Qué te interesaba de tus juguetes?</h3>
+			<h3>6- De chico/a¿Desarmabas tus juguetes?</h3>
 			<label>
-				<input type="radio" value="1" name="p5" onclick="respuesta(5,this)"> como esta construido
+				<input type="radio" value="1" name="p5" onclick="respuesta(5,this)"> si
 			</label>
 			<label>
-				<input type="radio" value="2" name="p5" onclick="respuesta(5,this)"> su funcionalidad
+				<input type="radio" value="2" name="p5" onclick="respuesta(5,this)"> no
+			
+		</section>
+
+		<section id="p6">
+			<h3>7- ¿Que haces cuando se descompone algún electrodoméstico en casa?</h3>
+			<label>
+				<input type="radio" value="1" name="p6" onclick="respuesta(6,this)"> Lo llevo al servicio técnico
+			</label>
+			<label>
+				<input type="radio" value="2" name="p6" onclick="respuesta(6,this)"> Trato de repararlo 
 			</label>
 		</section>
 
-	
+		<section id="p7">
+			<h3>8- ¿Qué hago bien?</h3>
+			<label>
+				<input type="radio" value="1" name="p7" onclick="respuesta(7,this)"> editar videos y programas
+			</label>
+			<label>
+				<input type="radio" value="2" name="p7" onclick="respuesta(7,this)"> concreto/mamposteria(poner ladrillos)
+			</label>
+			<label>
+				<input type="radio" value="3" name="p7" onclick="respuesta(7,this)"> diseñar, soldar y tornear  
+			</label>
+		</section>
 
-
+		<section id="p8">
+			<h3>9- ¿Prefieres trabajar con máquinas, con personas o equipos informaticos?</h3>
+			<label>
+				<input type="radio" value="1" name="p8" onclick="respuesta(8,this)"> Máquinas
+			</label>
+			<label>
+				<input type="radio" value="2" name="p8" onclick="respuesta(8,this)"> Grupos de Personas
+			</label>
+			<label>
+				<input type="radio" value="3" name="p8" onclick="respuesta(8,this)"> Equipos informáticos
+			</label>
+		</section>
 		
-      	<button onclick="corregir()" id="btn-abrir"> CORREGIR </button>
+		<section id="p9">
+			<h3>10- En la producción de una película, me gustaría participar en:</h3>
+			<label>
+				<input type="radio" value="1" name="p9" onclick="respuesta(9,this)"> Diseño y construcción de escenografía 
+			</label>
+			<label>
+				<input type="radio" value="2" name="p9" onclick="respuesta(9,this)"> Edición de sonido y digitalización
+			</label>
+			<label>
+				<input type="radio" value="3" name="p9" onclick="respuesta(9,this)"> Montaje de equipos, máquinas y motoras
+			</label>
+		</section>
 
-		<dialog id="modal">
+      	<button onclick="corregir()" id="btn-abrir"> CORREGIR </button>
+    
+		<dialog  id="modal">
 
 			<h2 class="popTitle">Te recomendamos:</h2>
 			<h2><span id="resultadoFin"></span></h2>
@@ -106,10 +151,35 @@
 		</button>  
 		</dialog>
 
+
+
+		<dialog   id="modal2">
+
+			<h2 class="popTitle">Te recomendamos:</h2>
+			<h2><span id="resultadoFin"></span></h2>
+
+			<button id="btn-cerrar2">Cerrar popup
+			
+		</button>  
+		</dialog>
+
+
+
+		<dialog   id="modal3">
+
+			<h2 class="popTitle">Te recomendamos:</h2>
+			<h2><span id="resultadoFin"></span></h2>
+
+			<button id="btn-cerrar3">Cerrar popup
+			
+		</button>  
+		</dialog>
+
       	<h2>electronica: <span id="resultado"%></span></h2>
 		<h2>electromecanica:<span id="resultado2"%></span></h2>
 		<h2>construcciones:<span id="resultado3"%></span></h2>
       </div>
+
 	  <script src="script.js"></script> 
 
 	
