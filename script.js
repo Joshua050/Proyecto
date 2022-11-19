@@ -17,6 +17,8 @@ var modal3 = document.getElementById("modal3");
 
 var modal4 = document.getElementById("modal4");
 
+let sound  = new Audio('Audio-de-mati.mp3');
+
 
 btnCerrar.addEventListener("click",()=>{
 	modal.close();
@@ -79,6 +81,7 @@ function respuesta(num_pregunta, seleccionada){
 
 
 function corregir(){
+
 	cantidad_correctasElec = 0;
 	cantidad_correctasMec = 0;
 	cantidad_correctasCons = 0;
@@ -162,6 +165,7 @@ if(boolean == 0){
 	    if(construcciones > electronica && construcciones > mecanica ){
 	
 			modal3.showModal();
+			sound.play();
 			document.getElementById("resultadoFin3").innerHTML = "Construcciones";
 
 				
@@ -172,5 +176,6 @@ if(boolean == 0){
 
 		
 }
+
 
 

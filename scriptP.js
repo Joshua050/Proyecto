@@ -1,14 +1,14 @@
-const btnAbrirModal = 
-document.querySelector("#btn-abrir-modal");
-const btnCerrarModal = 
-document.querySelector("#btn-cerrar-modal");
-const modal = 
-document.querySelector("#modal");
+let sound  = new Audio('Audio-de-mati.mp3');
 
-btnAbrirModal.addEventListener("click",()=>{
-	modal.showModal();
+//var sonido = document.getElementById("sonido");
+
+
+sonido.addEventListener("click",()=>{
+	sound.play();
+
 })
 
-btnCerrarModal.addEventListener("click",()=>{
-	modal.close();
+sonido2.addEventListener("click",()=>{
+	sound.pause();
+
 })

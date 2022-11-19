@@ -31,7 +31,12 @@ label{
 label:hover{
 	background: #cec0fc;
 }
-button{
+
+
+
+
+
+#btn-abrir{
 	width:80%,
 	display block;
 	margin: auto;
@@ -42,10 +47,87 @@ button{
 	cursor: pointer;
 	border-radius: 20px;
 }
-button:hover{
+#btn-abrir:hover{
 	background: #000;
 	color: #fff;
 }
+
+#btn-cerrar4{
+	width:80%,
+	display block;
+	margin-left: 30ch;
+	padding: 10px;
+
+	background-color: #76d7c8;
+	border: none;
+	cursor: pointer;
+	border-radius: 20px;
+}
+#btn-cerrar4:hover{
+	background: #000;
+	color: #fff;
+}
+
+#btn-cerrar2{
+	width:80%,
+	display block;
+	margin-left: 30ch;
+	padding: 10px;
+
+	background-color: #76d7c8;
+	border: none;
+	cursor: pointer;
+	border-radius: 20px;
+}
+#btn-cerrar2:hover{
+	background: #000;
+	color: #fff;
+}
+
+#btn-cerrar3{
+	position: relative;
+	right: auto;
+	width:80%,
+	display block;
+	margin-left: 65%;
+	top: 30%;
+	padding: 10px;
+
+	background-color: #76d7c8;
+	border: none;
+	cursor: pointer;
+	border-radius: 20px;
+}
+#btn-cerrar3:hover{
+	background: #000;
+	color: #fff;
+}
+
+#btn-cerrar{
+	width:80%,
+	display block;
+	margin-left: 30ch;
+	padding: 10px;
+
+	background-color: #76d7c8;
+	border: none;
+	cursor: pointer;
+	border-radius: 20px;
+}
+#btn-cerrar:hover{
+	background: #000;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
 
 h2{
 	text-align: center;
@@ -97,10 +179,13 @@ background-color: rgba(0, 0, 0, 0.55);
 		background-color: rgba(0, 0, 0, 0.55);
 		
 		}
-		/*
+		
 		#modal3{
-			max-width: 50ch ;
-			height: 60%;
+			width:40%;
+			height:40%;
 			background-image:url(has.jpg);
+			background-repeat: no-repeat;
+			background-position: 50%;
+			background-position-y: top;
 			color: white;
-		}*/
+		}
