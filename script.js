@@ -1,16 +1,21 @@
 
 var btnAbrir = document.getElementById("btn-abrir");
+
 var btnCerrar = document.getElementById("btn-cerrar");
 
 var btnCerrar2 = document.getElementById("btn-cerrar2");
 
 var btnCerrar3 = document.getElementById("btn-cerrar3");
 
+var btnCerrar4 = document.getElementById("btn-cerrar4");
+
 var modal = document.getElementById("modal");
 
 var modal2 = document.getElementById("modal2");
 
 var modal3 = document.getElementById("modal3");
+
+var modal4 = document.getElementById("modal4");
 
 
 btnCerrar.addEventListener("click",()=>{
@@ -25,6 +30,11 @@ btnCerrar2.addEventListener("click",()=>{
 
 btnCerrar3.addEventListener("click",()=>{
 	modal3.close();
+	
+})
+
+btnCerrar4.addEventListener("click",()=>{
+	modal4.close();
 	
 })
 
@@ -109,9 +119,12 @@ construcciones2 = Math.trunc(construcciones);
 
 	////////////////////////
 	if(contador<10){
-		
+		document.getElementById("resultadoFin4").innerHTML = "Primero realiza todas las preguntas porfavor";
 	boolean = 1;
-	document.getElementById("resultadoFin").innerHTML = "Primero realiza todas las preguntas porfavor!";
+
+	modal4.showModal();
+
+		
 	
 		}
 
@@ -139,7 +152,7 @@ if(boolean == 0){
 		if(mecanica > electronica && mecanica > construcciones ){
 
 		modal2.showModal();
-		document.getElementById("resultadoFin").innerHTML = "Electro-Mecanica";
+		document.getElementById("resultadoFin2").innerHTML = "Electro-Mecanica";
 		
 		
 
@@ -149,13 +162,14 @@ if(boolean == 0){
 	    if(construcciones > electronica && construcciones > mecanica ){
 	
 			modal3.showModal();
-			document.getElementById("resultadoFin").innerHTML = "Construcciones";
+			document.getElementById("resultadoFin3").innerHTML = "Construcciones";
 
 				
 				}
 			}
 			
-				
+	boolean = 0;
+
 		
 }
 
